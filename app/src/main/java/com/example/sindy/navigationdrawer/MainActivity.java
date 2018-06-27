@@ -34,24 +34,11 @@ public class MainActivity extends AppCompatActivity {
         new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
-                // set item as selected to persist highlight
-                //menuItem.setChecked(true);
-                // close drawer when item is tapped
-                //mDrawerLayout.closeDrawers();
-
-                // Add code here to update the UI based on the item selected
-                // For example, swap UI fragments here
-
-                //return true;
-
-                int id = menuItem.getItemId();
-                Toast.makeText(MainActivity.this, "onNavigationItemSelected id "+id, Toast.LENGTH_SHORT).show();
-                switch (id){
+                switch (menuItem.getItemId()){
                     case R.id.nav_animal :
                         changeFragment(new FragmentAnimal());
                         break;
                     case R.id.nav_fruit:
-                        Toast.makeText(MainActivity.this, "nav fruit ?", Toast.LENGTH_SHORT).show();
                         changeFragment(new FragmentFruit());
                         break;
                     default:
@@ -67,13 +54,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Toast.makeText(this, "onOptionsItemSelected id "+item.getItemId(), Toast.LENGTH_SHORT).show();
         switch (item.getItemId()) {
             case android.R.id.home:
                 mDrawerLayout.openDrawer(GravityCompat.START);
-                return true;
-            case R.id.nav_animal:
-                Toast.makeText(this, "Détection clique nav animal ?", Toast.LENGTH_SHORT).show();
                 return true;
         }
         return super.onOptionsItemSelected(item);
