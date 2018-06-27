@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="192dp"
-    android:background="?attr/colorPrimaryDark"
-    android:padding="16dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:background="#ffffff"
     android:orientation="vertical"
-    android:gravity="bottom">
+    android:gravity="center">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    <ImageView
+        android:id="@+id/Home"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/home"/>
 
 </LinearLayout>
